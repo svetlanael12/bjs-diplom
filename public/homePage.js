@@ -53,7 +53,6 @@ managerMoney.conversionMoneyCallback = (data) => {
 
 //перевод валюты
 managerMoney.sendMoneyCallback = (data) => {
-    console.log(data)
     ApiConnector.transferMoney({ to: data.to, currency: data.currency, amount: data.amount }, (response) => {
         successMoneyTransactions(response.success, response.data, response.error);
     })
